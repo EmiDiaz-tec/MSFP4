@@ -101,7 +101,7 @@ La práctica integra contenidos de tres unidades de la asignatura **Modelado de 
 
 El sistema endocrino regula numerosos procesos mediante la liberación de hormonas producidas por glándulas especializadas. Una vez secretadas, las hormonas se transportan por la circulación hasta tejidos u órganos diana, donde interactúan con receptores específicos. Para introducir el estudio de su dinámica con analogías eléctricas, el proceso se representa con un modelo fenomenológico simplificado que reproduce de manera cualitativa el almacenamiento, la disipación, el retardo y la inercia de la respuesta.
 
-![Esquema del sistema endocrino con las variables y los elementos del circuito equivalente](Biorender_P4.jpg)
+![Esquema del sistema endocrino con las variables y los elementos del circuito equivalente](/Biorender_P4.jpeg)
 
 *Esquema del sistema endocrino elaborado en BioRender, con las variables y los elementos del circuito eléctrico equivalente.*
 
