@@ -415,7 +415,7 @@ Las trazas de CH1 y CH2 terminan en el mismo nivel que la verde y quedan cubiert
 
 | Figura | MATLAB/Simulink | Python |
 |---|---|---|
-| $V_e(t)$, tratamiento, caso y control ante el escalón (MATLAB incluye también la curva del caso por EID) | [`Caso_matlab.pdf`](CCT_matlab.pdf) | [`Caso_python.pdf`](CCT_python.pdf) |
+| $V_e(t)$, tratamiento, caso y control ante el escalón (MATLAB incluye también la curva del caso por EID) | [`CCT_matlab.pdf`](CCT_matlab.pdf) | [`CCT_python.pdf`](CCT_python.pdf) |
 
 Los PDF se enlazan para su consulta porque GitHub no los presenta como imágenes incrustadas.
 
