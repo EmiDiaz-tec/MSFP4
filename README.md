@@ -367,7 +367,7 @@ Como el integrador da $T(0)=1$, el caso con tratamiento **sigue al control sin e
 <a id="python"></a>
 ## Reproducción en Python
 
-El script `Guerrero24210583P4.py` reproduce los resultados con una segunda herramienta. Sus apartados son:
+El script `practica_4.py` reproduce los resultados con una segunda herramienta. Sus apartados son:
 
 1. **Datos generales:** $x_0=0$, $t\in[0,10]$ con $\Delta t=10^{-4}$ s ($N=100001$) y la entrada escalón unitario $V_e(t)$.
 2. **Ganancias del PID:** $k_P$, $k_I$, $k_D$ y $N$ obtenidas con *Tune*.
@@ -389,8 +389,8 @@ Para ejecutarlo se necesitan las bibliotecas `numpy`, `control` y `matplotlib` (
 
 El instructivo plantea construir en protoboard los circuitos del control y del caso con los valores comerciales indicados, aproximar el escalón unitario con el generador de funciones y registrar con el osciloscopio $V_e(t)$ y $V_s(t)$, primero en lazo abierto y después con el controlador analógico (alimentación simétrica de los amplificadores operacionales) en lazo cerrado.
 
-![Captura del osciloscopio con las respuestas del control, el caso y el tratamiento ante el escalón](Se_alLab.jpeg)
-
+![Captura del osciloscopio con las respuestas del control y caso](modp4controlycaso.bmp)
+![Captura del osciloscopio con las respuestas del control y el tratamiento ante el escalón](modp4pidycontrol.bmp)
 *Captura del osciloscopio (base de tiempo de 1 s/div, 500 mV/div en los cuatro canales, 500 S/s).*
 
 | Canal | $V_{pp}$ medido | Interpretación |
@@ -415,7 +415,7 @@ Las trazas de CH1 y CH2 terminan en el mismo nivel que la verde y quedan cubiert
 
 | Figura | MATLAB/Simulink | Python |
 |---|---|---|
-| $V_e(t)$, tratamiento, caso y control ante el escalón (MATLAB incluye también la curva del caso por EID) | [`Caso_matlab.pdf`](Caso_matlab.pdf) | [`Caso_python.pdf`](Caso_python.pdf) |
+| $V_e(t)$, tratamiento, caso y control ante el escalón (MATLAB incluye también la curva del caso por EID) | [`Caso_matlab.pdf`](CCT_matlab.pdf) | [`Caso_python.pdf`](CCT_python.pdf) |
 
 Los PDF se enlazan para su consulta porque GitHub no los presenta como imágenes incrustadas.
 
@@ -437,19 +437,6 @@ Las respuestas del caso obtenidas con las EID y con la función de transferencia
 - Coincidencia entre las EID, la función de transferencia, el circuito equivalente, MATLAB, Python y el osciloscopio.
 - Posibles diferencias entre simulación y laboratorio: tolerancias de resistores, capacitores e inductores; resistencia interna del inductor; tolerancia y resistencia serie equivalente del capacitor; valores comerciales del controlador; no idealidad de los amplificadores operacionales; limitaciones de los instrumentos; y la aproximación experimental del escalón.
 - Limitaciones de la analogía fenomenológica.
-
-### Notas de verificación
-
-- **Valor final y error:** en la hoja 2 de `AnalisisMatematico.pdf`, el límite rotulado como "Error", $\lim_{s\to0}\left[1-G(s)\right]$, se iguala a $R_2/(R_1+R_2)$, que es el valor final ($0.99$ y $0.50$). El error en estado estacionario es $R_1/(R_1+R_2)$, es decir, $0.0099$ para el control y $0.50$ para el caso.
-- **Columna *Block* de `ParametrosControlador.pdf`:** muestra los valores por defecto del bloque ($P=1$, $I=1$, $D=0$, $N=100$), porque la captura se tomó antes de actualizar el bloque; las ganancias de esta práctica son las de la columna *Tuned*, que son las del script de Python.
-- **Número de control en el script:** el encabezado de `Guerrero24210583P4.py` dice `2421058` (falta un dígito) y usa el nombre con acentos; el número correcto es 24210583.
-- **Nombre de la figura de Python:** el script guarda la figura como `Caso.pdf`; en esta entrega aparece como `Caso_python.pdf`.
-- **Etiqueta del eje vertical:** en Python es $V_e(t)$ [V] y en MATLAB es $V(t)$ [V]; la segunda describe mejor a todas las señales graficadas.
-- **Canales del osciloscopio:** la captura no indica qué señal corresponde a CH1 y CH2; la asignación de la tabla se basa en las amplitudes medidas.
-
-**Resultados del estudiante:** agregar un comentario interpretativo propio sobre cada familia de respuestas y las conclusiones de la práctica.
-
-[Volver al contenido](#contenido)
 
 ---
 
@@ -524,7 +511,7 @@ Organización de la entrega, con los nombres de los archivos tal como se generar
 
 ### Software
 
-- **MATLAB** y **Simulink**, con el modelo `sistema2020_4` y el cuaderno de la práctica.
+- **MATLAB** y **Simulink**, con el modelo `practica4` y el cuaderno de la práctica.
 - **Simscape Electrical**, para el circuito eléctrico equivalente del modelo.
 - Herramientas de Simulink para la sintonización del bloque **PID Controller**.
 - **Python** (por ejemplo, con **Visual Studio Code**) y las bibliotecas `numpy`, `control` y `matplotlib`.
@@ -548,7 +535,7 @@ Resistores, capacitores e inductor de los valores indicados, amplificadores oper
 1. Consultar el [repositorio general de la asignatura](https://github.com/DrPaulValle/MSF-IBF1020) y descargar los archivos de la práctica.
 2. Verificar la topología del circuito y los valores de $R_1$, $L$, $C$ y $R_2$ de control y caso.
 3. Derivar las EID y la función de transferencia, y calcular valor final, error y polos.
-4. Ejecutar el cuaderno MATLAB con el modelo `sistema2020_4` y exportar la figura en PDF.
+4. Ejecutar el cuaderno MATLAB con el modelo `practica4` y exportar la figura en PDF.
 5. Sintonizar el PID, registrar las ganancias y guardar la captura de la configuración.
 6. Ejecutar el script de Python con las mismas ganancias y obtener la figura.
 7. Construir los montajes del laboratorio y registrar las capturas del osciloscopio.
