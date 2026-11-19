@@ -10,9 +10,9 @@ El caso de estudio representa de forma **fenomenológica** los procesos de secre
 **Institución:** Tecnológico Nacional de México / Instituto Tecnológico de Tijuana  
 **Asignatura:** Modelado de Sistemas Fisiológicos  
 **Programa:** Ingeniería Biomédica  
-**Estudiante:** Josue Raul Guerrero Peñaloza · 24210583 · l24210583@tectijuana.edu.mx
+**Estudiante:** Díaz de León Bernal David Emiliano · C23211564 · l23211564@tectijuana.edu.mx
 
-**Repositorio de la práctica:** https://github.com/JosueWarrior935/MSFP4  
+**Repositorio de la práctica:** 
 **Repositorio de la asignatura:** https://github.com/DrPaulValle/MSF-IBF1020  
 **Sede:** Blvd. Alberto Limón Padilla s/n, Tijuana, C. P. 22454, B. C., México.
 
