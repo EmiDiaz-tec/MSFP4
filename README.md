@@ -12,7 +12,6 @@ El caso de estudio representa de forma **fenomenológica** los procesos de secre
 **Programa:** Ingeniería Biomédica  
 **Estudiante:** Díaz de León Bernal David Emiliano · C23211564 · l23211564@tectijuana.edu.mx
 
-**Repositorio de la práctica:** 
 **Repositorio de la asignatura:** https://github.com/DrPaulValle/MSF-IBF1020  
 **Sede:** Blvd. Alberto Limón Padilla s/n, Tijuana, C. P. 22454, B. C., México.
 
@@ -142,7 +141,7 @@ La modificación simultánea de $C$ y $R_2$ produce una dinámica distinta entre
 <a id="modelo"></a>
 ## Formulación matemática
 
-El desarrollo a mano está en el PDF [`AnalisisMatematico.pdf`](AnalisisMatematico.pdf) y se resume a continuación.
+El desarrollo a mano está en el PDF [`AnalisisMatematico.pdf`](Analisis_Matematico_P4.pdf) y se resume a continuación.
 
 ### 1. Ecuaciones integro-diferenciales (EID)
 
@@ -246,7 +245,7 @@ El polo dominante es aproximadamente $(R_1+R_2)/(L+R_1R_2C)$. En el caso, $R_1R_
 
 ### 3. Bosquejo previo
 
-Antes de simular se elaboró un bosquejo cualitativo de las respuestas al escalón (hoja 3 de [`AnalisisMatematico.pdf`](AnalisisMatematico.pdf)): el control sube rápido hasta ≈ 0.99 y el caso sube más despacio hasta ≈ 0.50.
+Antes de simular se elaboró un bosquejo cualitativo de las respuestas al escalón ([`AnalisisMatematico.pdf`](Analisis_Matematico_P4.pdf)): el control sube rápido hasta ≈ 0.99 y el caso sube más despacio hasta ≈ 0.50.
 
 [Volver al contenido](#contenido)
 
@@ -284,7 +283,7 @@ $$
 <a id="matlab"></a>
 ## Implementación en MATLAB y Simulink
 
-El cuaderno MATLAB (*live script*) abre el modelo `sistema2020_4`, lo simula con `StopTime` de 10 s, solver `ode15s` y `MaxStep` de 1e-2 s y grafica los resultados con la función `plotsignals`, que se llama una vez con la etiqueta `Caso`: $V_e(t)$, el tratamiento con controlador, el caso, el control y el caso obtenido con las EID. La función `plotsignals(t,x1,x2,x3,x4,x5,signal)` grafica cinco señales con distintos estilos de línea, con ejes en $-0.25\le t\le10\,\mathrm{s}$ y $-0.2\le V\le1.4\,\mathrm{V}$, leyenda en LaTeX, y exporta la figura en PDF vectorial con el nombre `<signal>_matlab.pdf` (aquí, `Caso_matlab.pdf`).
+El cuaderno MATLAB (*live script*) abre el modelo `practica4`, lo simula con `StopTime` de 10 s, solver `ode15s` y `MaxStep` de 1e-2 s y grafica los resultados con la función `plotsignals`, que se llama una vez con la etiqueta `Caso`: $V_e(t)$, el tratamiento con controlador, el caso, el control y el caso obtenido con las EID. La función `plotsignals(t,x1,x2,x3,x4,x5,signal)` grafica cinco señales con distintos estilos de línea, con ejes en $-0.25\le t\le10\,\mathrm{s}$ y $-0.2\le V\le1.4\,\mathrm{V}$, leyenda en LaTeX, y exporta la figura en PDF vectorial con el nombre `<signal>_matlab.pdf` (aquí, `CCT_matlab.pdf`).
 
 ### Modelo de Simulink
 
