@@ -46,9 +46,9 @@ El caso de estudio representa de forma **fenomenológica** los procesos de secre
 
 La práctica modela un compartimento endocrino simplificado con un circuito eléctrico que tiene una rama principal formada por la fuente de estímulo $V_e(t)$ y la resistencia de transporte $R_1$, y, en el nodo posterior, un capacitor $C$ a tierra en paralelo con una segunda rama formada por el inductor $L$ y la resistencia $R_2$ en serie. La salida $V_s(t)$ se mide en el nodo de unión entre $R_1$, $C$ y $L$. Por tener dos elementos independientes de almacenamiento de energía ($C$ y $L$), el sistema es de **segundo orden**.
 
-Se formulan las **ecuaciones integro-diferenciales (EID)** con las leyes de Kirchhoff y se obtiene la función de transferencia $G(s)=V_s(s)/V_e(s)$. Control y caso comparten $R_1$ y $L$ y difieren en $C$ y $R_2$: el control tiene $C=1\,\mu\mathrm{F}$ y $R_2=100\,\mathrm{k}\Omega$, y el caso $C=1000\,\mu\mathrm{F}$ y $R_2=1\,\mathrm{k}\Omega$. Ante un escalón unitario, el control alcanza $0.99\,\mathrm{V}$ casi de inmediato y el caso solo $0.50\,\mathrm{V}$ y con una dinámica unas 500 veces más lenta. Para reducir esa diferencia se diseña un **controlador PID con retroalimentación negativa** que toma la respuesta del control como referencia. Los resultados se obtienen con MATLAB/Simulink (modelo `sistema2020_4`), se simulan en sus tres representaciones (EID, función de transferencia y circuito equivalente), se reproducen en Python y se comparan con una captura del osciloscopio del laboratorio.
+Se formulan las **ecuaciones integro-diferenciales (EID)** con las leyes de Kirchhoff y se obtiene la función de transferencia $G(s)=V_s(s)/V_e(s)$. Control y caso comparten $R_1$ y $L$ y difieren en $C$ y $R_2$: el control tiene $C=1\,\mu\mathrm{F}$ y $R_2=100\,\mathrm{k}\Omega$, y el caso $C=1000\,\mu\mathrm{F}$ y $R_2=1\,\mathrm{k}\Omega$. Ante un escalón unitario, el control alcanza $0.99\,\mathrm{V}$ casi de inmediato y el caso solo $0.50\,\mathrm{V}$ y con una dinámica unas 500 veces más lenta. Para reducir esa diferencia se diseña un **controlador PID con retroalimentación negativa** que toma la respuesta del control como referencia. Los resultados se obtienen con MATLAB/Simulink, se simulan en sus tres representaciones (EID, función de transferencia y circuito equivalente), se reproducen en Python y se comparan con una captura del osciloscopio del laboratorio.
 
-**Palabras clave:** circuito RLC; controlador PID; sistema endocrino; modelado de sistemas fisiológicos; MATLAB; Simulink; Simscape Electrical; Python; simulación *in silico*; instrumentación electrónica.
+**Palabras clave:** Circuito RLC; Controlador PID; Sistema endocrino; Modelo matemático; Simulaciones numéricas.
 
 [Volver al contenido](#contenido)
 
@@ -101,7 +101,7 @@ La práctica integra contenidos de tres unidades de la asignatura **Modelado de 
 
 El sistema endocrino regula numerosos procesos mediante la liberación de hormonas producidas por glándulas especializadas. Una vez secretadas, las hormonas se transportan por la circulación hasta tejidos u órganos diana, donde interactúan con receptores específicos. Para introducir el estudio de su dinámica con analogías eléctricas, el proceso se representa con un modelo fenomenológico simplificado que reproduce de manera cualitativa el almacenamiento, la disipación, el retardo y la inercia de la respuesta.
 
-![Esquema del sistema endocrino con las variables y los elementos del circuito equivalente](esquema_endocrino.jpg)
+![Esquema del sistema endocrino con las variables y los elementos del circuito equivalente](Biorender_P4.jpg)
 
 *Esquema del sistema endocrino elaborado en BioRender, con las variables y los elementos del circuito eléctrico equivalente.*
 
